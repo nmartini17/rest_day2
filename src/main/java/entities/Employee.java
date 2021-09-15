@@ -19,7 +19,7 @@ public class Employee {
     public Employee(String name, String address, int salary) {
         this.name = name;
         this.address = address;
-        this.salary = salary;
+        this.salary = salary; 
     }
 
     public String getName() {
