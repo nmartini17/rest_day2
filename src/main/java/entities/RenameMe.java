@@ -1,6 +1,7 @@
 package entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,6 +29,9 @@ public class RenameMe implements Serializable {
     public RenameMe(String dummyStr1, String dummyStr2) {
         this.dummyStr1 = dummyStr1;
         this.dummyStr2 = dummyStr2;
+    }
+
+    public RenameMe(String title, int year, List<String> actors) {
     }
 
     public Long getId() {

@@ -1,22 +1,13 @@
-package entities;
+package dtos;
 
-import javax.persistence.*;
+import entities.Employee;
 
-@Table(name = "employee")
-@Entity
-public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+public class EmployeeDTO {
     private String name;
     private String address;
     private int salary;
 
-    public Employee() {
-    }
-
-    public Employee(String name, String address, int salary) {
+    public EmployeeDTO(Employee e) {
         this.name = name;
         this.address = address;
         this.salary = salary;
@@ -44,13 +35,5 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 }

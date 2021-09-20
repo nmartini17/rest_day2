@@ -22,7 +22,7 @@ public class RenameMeDTO {
         this.str1 = dummyStr1;
         this.str2 = dummyStr2;
     }
-    
+
     public static List<RenameMeDTO> getDtos(List<RenameMe> rms){
         List<RenameMeDTO> rmdtos = new ArrayList();
         rms.forEach(rm->rmdtos.add(new RenameMeDTO(rm)));
@@ -57,10 +57,4 @@ public class RenameMeDTO {
     public String toString() {
         return "RenameMeDTO{" + "id=" + id + ", str1=" + str1 + ", str2=" + str2 + '}';
     }
-    
-    
-    
-    
-    
-    
 }
