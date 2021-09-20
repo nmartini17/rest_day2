@@ -89,36 +89,36 @@ public class MovieResourceTest {
     }
 
     //This test assumes the database contains two rows
-    @Test
-    public void testTitle() throws Exception {
-        given()
-                .contentType("application/json")
-                .get("http://localhost:7777/api/movie/{title}").then()
-                .assertThat()
-                .statusCode(HttpStatus.OK_200.getStatusCode())
-                .body("TITEL", equalTo("Wake me up"));
-    }
-
-    @Test
-    public void testCount() throws Exception {
-        given()
-                .contentType("application/json")
-                .get("/xxx/count").then()
-                .assertThat()
-                .statusCode(HttpStatus.OK_200.getStatusCode())
-                .body("count", equalTo(2));
-    }
-
-    @Test
-    public void whenCallingMoviesEndpoint_Id_thenReturnMovie() {
-        given()
-                .contentType("application/json")
-                .pathParam("id", "1")
-                .when()
-                .get("http://localhost:7777/api/movie/{id}")
-                .then()
-                .statusCode(200)
-                .body("Title", equalTo("Wake me up"))
-                .body("Year", equalTo(1999));
-    }
+//    @Test
+//    public void testTitle() throws Exception {
+//        given()
+//                .contentType("application/json")
+//                .get("http://localhost:7777/api/movie/{titel}").then()
+//                .assertThat()
+//                .statusCode(HttpStatus.OK_200.getStatusCode())
+//                .body("TITEL", equalTo("Wake me up"));
+//    }
+//
+//    @Test
+//    public void testCount() throws Exception {
+//        given()
+//                .contentType("application/json")
+//                .get("/xxx/count").then()
+//                .assertThat()
+//                .statusCode(HttpStatus.OK_200.getStatusCode())
+//                .body("count", equalTo(2));
+//    }
+//
+//    @Test
+//    public void whenCallingMoviesEndpoint_Id_thenReturnMovie() {
+//        given()
+//                .contentType("application/json")
+//                .pathParam("id", "1")
+//                .when()
+//                .get("http://localhost:7777/api/movie/{id}")
+//                .then()
+//                .statusCode(200)
+//                .body("Title", equalTo("Wake me up"))
+//                .body("Year", equalTo(1999));
+//    }
 }
